@@ -1,0 +1,71 @@
+@import "reset.css";
+
+/* 클래스인 경우 앞에 . */
+
+body {
+    background-color: #f6f9fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.canvas {
+    width: 700px;
+    height: 700px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.controls {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls .controls__btns {
+    margin-bottom: 30px;
+}
+
+.controls__btns button {
+    /* 기본스타일을 초기화 시켜주는 방법 */
+    all: unset;
+    cursor: pointer;
+    background-color: white;
+    /* padding 은 시계방향으로 돈다 : 12 3 6 9  */
+    /* 상하좌우가 같으면 그냥 상하/ 좌우 두개만 쓴다. */
+    padding: 5px 0px;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.controls__btns button:active {
+    transform: scale(0.98);
+}
+
+.controls .contorls__range {
+    margin-top: 30px;
+}
+
+.controls .controls__colors {
+    display: flex;
+}
+
+.controls__colors .controls__color {
+    width: 50px;
+    height: 50px;
+    /* 원형처럼 만들려면 width 와 height 의 절만만큼 border-radius 를 준다 */
+    border-radius: 25px;
+    /* 커서는 포인터로 -> 커서 가져다 대면 포인터생김 */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
